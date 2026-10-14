@@ -1,0 +1,8 @@
+# Original large media files
+images/*.jpg
+videos/drilling.mp4
+videos/water.mp4
+
+# Python cache
+__pycache__/
+*.pyc
