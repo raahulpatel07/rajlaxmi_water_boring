@@ -7,9 +7,6 @@ import threading
 import webbrowser
 
 
-# Rajlaxmi Water Boring
-# Local development server
-
 BASE_DIR = Path(__file__).resolve().parent
 
 HOST = "0.0.0.0"
@@ -38,9 +35,7 @@ def get_local_ip():
 
 def open_browser():
 
-    webbrowser.open(
-        f"http://127.0.0.1:{PORT}"
-    )
+    webbrowser.open(f"http://127.0.0.1:{PORT}")
 
 
 def main():
@@ -64,9 +59,7 @@ def main():
     print("\nMobile URL (same Wi-Fi):")
     print(f"http://{local_ip}:{PORT}")
 
-    print("\nBusiness: Rajlaxmi Water Boring")
-    print("Contact: 8303746358")
-    print("Location: Bharatkoop Mandir, Chitrakoot, UP")
+    print("\nContact: 8303746358")
 
     print("\nPress CTRL + C to stop.")
 

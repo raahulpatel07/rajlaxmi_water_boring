@@ -1,8 +1,9 @@
 "use strict";
 
-/* =============================
+/* =================================
+   RAJLAXMI WATER BORING
    LANGUAGE TRANSLATIONS
-============================= */
+================================= */
 
 const translations = {
 
@@ -130,9 +131,9 @@ const translations = {
 
 };
 
-/* =============================
-   HERO TEXT SLIDES
-============================= */
+/* =================================
+   HERO SLIDES
+================================= */
 
 const slides = {
 
@@ -168,9 +169,9 @@ const slides = {
 
 };
 
-/* =============================
-   LANGUAGE
-============================= */
+/* =================================
+   LANGUAGE SETTINGS
+================================= */
 
 let language =
     localStorage.getItem("rajlaxmiLanguage") || "hi";
@@ -180,9 +181,7 @@ if (!translations[language]) {
 }
 
 const languageBtn = document.getElementById("languageBtn");
-
 const heroSlider = document.getElementById("heroSlider");
-
 const dots = document.querySelectorAll(".slider-dot");
 
 let currentSlide = 0;
@@ -205,7 +204,7 @@ function showSlide(index) {
         <p>${slide.text}</p>
     `;
 
-    heroSlider.style.animation = "slideUp .75s ease";
+    heroSlider.style.animation = "slideUp .7s ease";
 
     dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === currentSlide);
@@ -244,9 +243,9 @@ languageBtn.addEventListener("click", () => {
 
 });
 
-/* =============================
-   AUTOMATIC TEXT SLIDER
-============================= */
+/* =================================
+   TEXT SLIDER
+================================= */
 
 function nextSlide() {
     showSlide(currentSlide + 1);
@@ -285,7 +284,6 @@ dots.forEach(dot => {
     dot.addEventListener("click", () => {
 
         showSlide(Number(dot.dataset.slide));
-
         startSlideTimer();
 
     });
@@ -295,9 +293,9 @@ dots.forEach(dot => {
 applyLanguage();
 startSlideTimer();
 
-/* =============================
-   DARK / LIGHT THEME
-============================= */
+/* =================================
+   THEME SWITCH
+================================= */
 
 const themeBtn = document.getElementById("themeBtn");
 
@@ -335,9 +333,9 @@ themeBtn.addEventListener("click", () => {
 
 applyTheme();
 
-/* =============================
-   REAL VIDEO BACKGROUND
-============================= */
+/* =================================
+   OPTIMIZED VIDEO PLAYER
+================================= */
 
 const videos = [
     document.getElementById("drillingVideo"),
@@ -345,34 +343,38 @@ const videos = [
 ];
 
 let activeVideo = 0;
-let isSwitching = false;
+let switching = false;
 
-const FADE_TIME = 1500;
+const FADE_DURATION = 1200;
 
-function playVideo(index) {
+videos.forEach(video => {
+    video.muted = true;
+    video.playsInline = true;
+});
+
+async function startVideo(index) {
 
     const video = videos[index];
 
     if (video.error) {
-        return Promise.reject(
-            new Error("Video file could not be loaded")
-        );
+        throw new Error("Video is unavailable");
     }
 
     try {
         video.currentTime = 0;
     } catch (error) {
-        console.warn("Cannot reset video:", error);
+        console.warn("Video seek unavailable:", error);
     }
 
-    return video.play();
+    await video.play();
+
 }
 
-async function switchVideo() {
+async function switchBackgroundVideo() {
 
-    if (isSwitching) return;
+    if (switching) return;
 
-    isSwitching = true;
+    switching = true;
 
     const oldIndex = activeVideo;
     const nextIndex = 1 - oldIndex;
@@ -382,7 +384,12 @@ async function switchVideo() {
 
     try {
 
-        await playVideo(nextIndex);
+        if (nextVideo.preload === "none") {
+            nextVideo.preload = "auto";
+            nextVideo.load();
+        }
+
+        await startVideo(nextIndex);
 
         nextVideo.classList.add("active");
         oldVideo.classList.remove("active");
@@ -392,18 +399,15 @@ async function switchVideo() {
         setTimeout(() => {
 
             oldVideo.pause();
-            isSwitching = false;
+            switching = false;
 
-        }, FADE_TIME);
+        }, FADE_DURATION);
 
     } catch (error) {
 
-        console.warn(
-            "Next background video unavailable:",
-            error
-        );
+        console.warn("Video switching failed:", error);
 
-        isSwitching = false;
+        switching = false;
 
         if (!oldVideo.error) {
 
@@ -422,12 +426,10 @@ async function switchVideo() {
 
 videos.forEach((video, index) => {
 
-    video.muted = true;
-
     video.addEventListener("ended", () => {
 
         if (index === activeVideo) {
-            switchVideo();
+            switchBackgroundVideo();
         }
 
     });
@@ -435,12 +437,12 @@ videos.forEach((video, index) => {
     video.addEventListener("error", () => {
 
         console.warn(
-            "Background video not found:",
+            "Video loading error:",
             video.currentSrc
         );
 
-        if (index === activeVideo && !isSwitching) {
-            switchVideo();
+        if (index === activeVideo && !switching) {
+            switchBackgroundVideo();
         }
 
     });
@@ -449,23 +451,15 @@ videos.forEach((video, index) => {
 
 videos[0].play().catch(error => {
 
-    console.warn(
-        "Initial video autoplay unavailable:",
-        error
-    );
-
-    if (!videos[1].error) {
-        switchVideo();
-    }
+    console.warn("Autoplay unavailable:", error);
 
 });
 
-/* =============================
+/* =================================
    MOBILE MENU
-============================= */
+================================= */
 
 const menuBtn = document.getElementById("menuBtn");
-
 const navigation = document.getElementById("navigation");
 
 function closeMenu() {
@@ -478,13 +472,13 @@ function closeMenu() {
 
 menuBtn.addEventListener("click", () => {
 
-    const opened = navigation.classList.toggle("open");
+    const isOpen = navigation.classList.toggle("open");
 
-    menuBtn.textContent = opened ? "✕" : "☰";
+    menuBtn.textContent = isOpen ? "✕" : "☰";
 
     menuBtn.setAttribute(
         "aria-expanded",
-        String(opened)
+        String(isOpen)
     );
 
 });
@@ -495,9 +489,9 @@ navigation.querySelectorAll("a").forEach(link => {
 
 });
 
-/* =============================
-   SCROLL ANIMATION
-============================= */
+/* =================================
+   SCROLL REVEAL
+================================= */
 
 if ("IntersectionObserver" in window) {
 
@@ -530,9 +524,9 @@ if ("IntersectionObserver" in window) {
 
 }
 
-/* =============================
-   CURRENT YEAR
-============================= */
+/* =================================
+   FOOTER YEAR
+================================= */
 
 document.getElementById("year").textContent =
     new Date().getFullYear();

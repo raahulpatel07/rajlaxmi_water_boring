@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="theme-color" content="#071525">
 
     <title>Rajlaxmi Water Boring | Chitrakoot UP</title>
 
     <meta name="description"
-          content="Rajlaxmi Water Boring, Bharatkoop Mandir, Chitrakoot, Uttar Pradesh. Water boring and borewell drilling enquiries. Call 8303746358.">
+          content="Rajlaxmi Water Boring, Bharatkoop Mandir, Chitrakoot, Uttar Pradesh. Water boring and borewell drilling services. Contact 8303746358.">
+
+    <link rel="preload"
+          href="images/machine1.webp"
+          as="image">
 
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <header class="navbar">
 
@@ -24,11 +33,17 @@
     </a>
 
     <nav id="navigation">
+
         <a href="#home" data-i18n="navHome">होम</a>
+
         <a href="#services" data-i18n="navServices">सेवाएं</a>
+
         <a href="#about" data-i18n="navAbout">हमारे बारे में</a>
+
         <a href="#gallery" data-i18n="navGallery">गैलरी</a>
+
         <a href="#contact" data-i18n="navContact">संपर्क</a>
+
     </nav>
 
     <div class="nav-actions">
@@ -50,7 +65,7 @@
         <button id="menuBtn"
                 class="icon-button menu-button"
                 type="button"
-                aria-label="Open menu"
+                aria-label="Toggle menu"
                 aria-expanded="false"
                 aria-controls="navigation">
             ☰
@@ -62,7 +77,7 @@
 
 <main>
 
-<!-- HERO WITH REAL VIDEOS -->
+<!-- HERO SECTION -->
 
 <section class="hero" id="home">
 
@@ -74,10 +89,12 @@
             autoplay
             muted
             playsinline
-            preload="auto"
-            poster="images/machine1.jpg">
+            preload="metadata"
+            poster="images/machine1.webp">
 
-            <source src="videos/drilling.mp4" type="video/mp4">
+            <source
+                src="videos/drilling_optimized.mp4"
+                type="video/mp4">
 
         </video>
 
@@ -86,10 +103,12 @@
             class="background-video"
             muted
             playsinline
-            preload="metadata"
-            poster="images/machine3.jpg">
+            preload="none"
+            poster="images/machine3.webp">
 
-            <source src="videos/water.mp4" type="video/mp4">
+            <source
+                src="videos/water_optimized.mp4"
+                type="video/mp4">
 
         </video>
 
@@ -117,22 +136,22 @@
 
         <div class="hero-buttons">
 
-            <a class="btn btn-primary"
-               href="tel:8303746358"
+            <a href="tel:8303746358"
+               class="btn btn-primary"
                data-i18n="callNow">
                 📞 अभी कॉल करें
             </a>
 
-            <a class="btn btn-whatsapp"
-               href="https://wa.me/918303746358"
+            <a href="https://wa.me/918303746358"
                target="_blank"
                rel="noopener noreferrer"
+               class="btn btn-whatsapp"
                data-i18n="whatsapp">
                 💬 WhatsApp करें
             </a>
 
-            <a class="btn btn-outline"
-               href="#services"
+            <a href="#services"
+               class="btn btn-outline"
                data-i18n="ourServices">
                 हमारी सेवाएं
             </a>
@@ -180,7 +199,7 @@
 
     <a href="#services"
        class="scroll-down"
-       aria-label="Scroll to services">
+       aria-label="Scroll down">
         ↓
     </a>
 
@@ -284,9 +303,12 @@
         <div class="about-photo reveal">
 
             <img
-                src="images/machine1.jpg"
-                alt="Rajlaxmi Water Boring machinery"
-                loading="lazy">
+                src="images/machine1.webp"
+                alt="Rajlaxmi Water Boring Machine"
+                loading="lazy"
+                decoding="async"
+                width="1280"
+                height="1706">
 
             <div class="photo-caption">
                 💧 RAJLAXMI WATER BORING
@@ -313,11 +335,17 @@
 
             <div class="about-points">
 
-                <div>✅ <span data-i18n="aboutPoint1">वाटर बोरिंग सेवाएं</span></div>
+                <div>
+                    ✅ <span data-i18n="aboutPoint1">वाटर बोरिंग सेवाएं</span>
+                </div>
 
-                <div>✅ <span data-i18n="aboutPoint2">बोरवेल ड्रिलिंग</span></div>
+                <div>
+                    ✅ <span data-i18n="aboutPoint2">बोरवेल ड्रिलिंग</span>
+                </div>
 
-                <div>✅ <span data-i18n="aboutPoint3">फोन और WhatsApp संपर्क</span></div>
+                <div>
+                    ✅ <span data-i18n="aboutPoint3">फोन और WhatsApp संपर्क</span>
+                </div>
 
             </div>
 
@@ -333,7 +361,7 @@
 
 </section>
 
-<!-- PHOTO GALLERY -->
+<!-- GALLERY -->
 
 <section class="section gallery-section" id="gallery">
 
@@ -358,9 +386,10 @@
         <figure class="gallery-card reveal">
 
             <img
-                src="images/machine1.jpg"
+                src="images/machine1.webp"
                 alt="Water boring machine"
-                loading="lazy">
+                loading="lazy"
+                decoding="async">
 
             <figcaption data-i18n="gallery1">
                 वाटर बोरिंग मशीन
@@ -371,9 +400,10 @@
         <figure class="gallery-card reveal">
 
             <img
-                src="images/machine2.jpg"
+                src="images/machine2.webp"
                 alt="Borewell drilling"
-                loading="lazy">
+                loading="lazy"
+                decoding="async">
 
             <figcaption data-i18n="gallery2">
                 बोरवेल ड्रिलिंग
@@ -384,9 +414,10 @@
         <figure class="gallery-card reveal">
 
             <img
-                src="images/machine3.jpg"
+                src="images/machine3.webp"
                 alt="Water boring work"
-                loading="lazy">
+                loading="lazy"
+                decoding="async">
 
             <figcaption data-i18n="gallery3">
                 बोरिंग कार्य
@@ -429,7 +460,9 @@
                 <span class="contact-icon">📞</span>
 
                 <div>
-                    <strong data-i18n="phoneLabel">मोबाइल नंबर</strong>
+                    <strong data-i18n="phoneLabel">
+                        मोबाइल नंबर
+                    </strong>
 
                     <p>
                         <a href="tel:8303746358">
@@ -445,7 +478,9 @@
                 <span class="contact-icon">📍</span>
 
                 <div>
-                    <strong data-i18n="addressLabel">हमारा पता</strong>
+                    <strong data-i18n="addressLabel">
+                        हमारा पता
+                    </strong>
 
                     <p>
                         Bharatkoop Mandir,<br>
@@ -460,7 +495,9 @@
                 <span class="contact-icon">🚜</span>
 
                 <div>
-                    <strong data-i18n="businessLabel">व्यवसाय</strong>
+                    <strong data-i18n="businessLabel">
+                        व्यवसाय
+                    </strong>
 
                     <p>
                         Water Boring & Borewell Services
@@ -519,4 +556,39 @@
     </p>
 
     <p>
-        📞 
+        📞 <a href="tel:8303746358">83037 46358</a>
+    </p>
+
+    <p data-i18n="footerDescription">
+        पानी की हर जरूरत का भरोसेमंद समाधान
+    </p>
+
+    <div class="footer-bottom">
+        © <span id="year"></span>
+        Rajlaxmi Water Boring. All Rights Reserved.
+    </div>
+
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating-contact">
+
+    <a href="tel:8303746358"
+       class="floating-button floating-call"
+       aria-label="Call Rajlaxmi Water Boring">
+        📞
+    </a>
+
+    <a href="https://wa.me/918303746358"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="floating-button floating-whatsapp"
+       aria-label="WhatsApp Rajlaxmi Water Boring">
+        💬
+    </a>
+
+</div>
+
+</body>
+</html>
