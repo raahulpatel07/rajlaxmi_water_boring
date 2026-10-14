@@ -1,288 +1,538 @@
-// =================================
-// LANGUAGE TRANSLATIONS
-// =================================
+"use strict";
+
+/* =============================
+   LANGUAGE TRANSLATIONS
+============================= */
 
 const translations = {
 
     hi: {
+
         navHome: "होम",
         navServices: "सेवाएं",
         navAbout: "हमारे बारे में",
         navGallery: "गैलरी",
         navContact: "संपर्क",
 
-        badge: "🚜 आपकी बोरिंग सेवा के लिए संपर्क करें",
+        heroBadge: "🚜 वाटर बोरिंग एवं बोरवेल सेवाएं",
 
-        call: "📞 अभी कॉल करें",
+        callNow: "📞 अभी कॉल करें",
         whatsapp: "💬 WhatsApp करें",
-        explore: "हमारी सेवाएं",
-
-        servicesTitle: "हमारी <span>सेवाएं</span>",
-        servicesSubtitle: "पानी की बोरिंग से जुड़ी सेवाओं की जानकारी",
-
-        service1Title: "वाटर बोरिंग",
-        service1Desc: "पानी की जरूरत के लिए बोरिंग कार्य की जानकारी और सुविधा के लिए संपर्क करें।",
-
-        service2Title: "बोरवेल ड्रिलिंग",
-        service2Desc: "बोरवेल ड्रिलिंग से जुड़ी जानकारी और उपलब्ध सेवाओं के लिए हमसे बात करें।",
-
-        service3Title: "बोरिंग की जानकारी",
-        service3Desc: "बोरिंग कार्य, स्थान और अन्य जरूरी जानकारी के लिए सीधे संपर्क करें।",
-
-        aboutTitle: "Rajrani <span>Water Boring</span>",
-        aboutDesc: "राजरानी वाटर बोरिंग, भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश में स्थित है। वाटर बोरिंग और बोरवेल से जुड़ी सेवाओं की जानकारी के लिए हमसे संपर्क करें।",
-
+        ourServices: "हमारी सेवाएं",
         contactNow: "📞 आज ही संपर्क करें",
 
+        servicesLabel: "हमारी सेवाएं",
+        servicesTitle: "हमारी <span>सेवाएं</span>",
+        servicesDescription: "वाटर बोरिंग और बोरवेल से जुड़ी जानकारी",
+
+        service1Title: "वाटर बोरिंग",
+        service1Description: "वाटर बोरिंग कार्य की जानकारी और उपलब्धता के लिए संपर्क करें।",
+
+        service2Title: "बोरवेल ड्रिलिंग",
+        service2Description: "बोरवेल ड्रिलिंग से जुड़ी सेवाओं के बारे में जानकारी प्राप्त करें।",
+
+        service3Title: "बोरिंग की जानकारी",
+        service3Description: "बोरिंग कार्य, स्थान और अन्य जानकारी के लिए सीधे कॉल करें।",
+
+        learnMore: "अधिक जानें →",
+
+        aboutLabel: "हमारे व्यवसाय के बारे में",
+        aboutTitle: "Rajlaxmi <span>Water Boring</span>",
+
+        aboutDescription:
+            "राजलक्ष्मी वाटर बोरिंग, भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश में स्थित है। वाटर बोरिंग और बोरवेल ड्रिलिंग से जुड़ी जानकारी के लिए हमसे संपर्क करें।",
+
+        aboutPoint1: "वाटर बोरिंग सेवाएं",
+        aboutPoint2: "बोरवेल ड्रिलिंग",
+        aboutPoint3: "फोन और WhatsApp संपर्क",
+
+        galleryLabel: "फोटो गैलरी",
         galleryTitle: "हमारी <span>गैलरी</span>",
-        gallerySubtitle: "वाटर बोरिंग और मशीन की झलकियां",
+        galleryDescription: "वाटर बोरिंग और मशीन की तस्वीरें",
 
         gallery1: "वाटर बोरिंग मशीन",
         gallery2: "बोरवेल ड्रिलिंग",
         gallery3: "बोरिंग कार्य",
 
+        contactLabel: "संपर्क करें",
         contactTitle: "हमसे <span>संपर्क करें</span>",
-        contactSubtitle: "बोरिंग की जानकारी के लिए कॉल या WhatsApp करें।",
+        contactDescription: "वाटर बोरिंग की जानकारी के लिए कॉल या WhatsApp करें।",
 
-        phoneLabel: "📞 मोबाइल नंबर",
-        addressLabel: "📍 हमारा पता",
-        businessLabel: "🚜 व्यवसाय",
+        phoneLabel: "मोबाइल नंबर",
+        addressLabel: "हमारा पता",
+        businessLabel: "व्यवसाय",
 
-        footerAddress: "📍 भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश",
-        footerText: "💧 पानी की हर जरूरत का भरोसेमंद समाधान"
+        footerAddress: "भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश",
+        footerDescription: "पानी की हर जरूरत का भरोसेमंद समाधान"
+
     },
 
     en: {
+
         navHome: "Home",
         navServices: "Services",
         navAbout: "About Us",
         navGallery: "Gallery",
         navContact: "Contact",
 
-        badge: "🚜 Contact Us for Water Boring Services",
+        heroBadge: "🚜 Water Boring & Borewell Services",
 
-        call: "📞 Call Now",
+        callNow: "📞 Call Now",
         whatsapp: "💬 WhatsApp Us",
-        explore: "Our Services",
-
-        servicesTitle: "Our <span>Services</span>",
-        servicesSubtitle: "Explore our water boring services",
-
-        service1Title: "Water Boring",
-        service1Desc: "Contact us for information and availability of water boring services.",
-
-        service2Title: "Borewell Drilling",
-        service2Desc: "Get in touch to learn more about borewell drilling and available services.",
-
-        service3Title: "Boring Enquiries",
-        service3Desc: "Contact us directly for information about boring work, locations and other details.",
-
-        aboutTitle: "Rajrani <span>Water Boring</span>",
-        aboutDesc: "Rajrani Water Boring is located near Bharatkoop Mandir, Chitrakoot, Uttar Pradesh. Contact us to learn more about water boring and borewell-related services.",
-
+        ourServices: "Our Services",
         contactNow: "📞 Contact Now",
 
+        servicesLabel: "OUR SERVICES",
+        servicesTitle: "Our <span>Services</span>",
+        servicesDescription: "Information about water boring and borewell services",
+
+        service1Title: "Water Boring",
+        service1Description: "Contact us for water boring information and service availability.",
+
+        service2Title: "Borewell Drilling",
+        service2Description: "Get information about borewell drilling and related services.",
+
+        service3Title: "Boring Enquiries",
+        service3Description: "Call us for boring work, locations and other information.",
+
+        learnMore: "Learn More →",
+
+        aboutLabel: "ABOUT OUR BUSINESS",
+        aboutTitle: "Rajlaxmi <span>Water Boring</span>",
+
+        aboutDescription:
+            "Rajlaxmi Water Boring is located near Bharatkoop Mandir, Chitrakoot, Uttar Pradesh. Contact us for information about water boring and borewell drilling services.",
+
+        aboutPoint1: "Water Boring Services",
+        aboutPoint2: "Borewell Drilling",
+        aboutPoint3: "Phone and WhatsApp Contact",
+
+        galleryLabel: "PHOTO GALLERY",
         galleryTitle: "Our <span>Gallery</span>",
-        gallerySubtitle: "Water boring and machinery highlights",
+        galleryDescription: "Water boring and machinery photos",
 
         gallery1: "Water Boring Machine",
         gallery2: "Borewell Drilling",
         gallery3: "Boring Work",
 
+        contactLabel: "GET IN TOUCH",
         contactTitle: "Contact <span>Us</span>",
-        contactSubtitle: "Call or WhatsApp us for boring enquiries.",
+        contactDescription: "Call or WhatsApp us for water boring enquiries.",
 
-        phoneLabel: "📞 Phone Number",
-        addressLabel: "📍 Our Address",
-        businessLabel: "🚜 Business",
+        phoneLabel: "Phone Number",
+        addressLabel: "Our Address",
+        businessLabel: "Business",
 
-        footerAddress: "📍 Bharatkoop Mandir, Chitrakoot, Uttar Pradesh",
-        footerText: "💧 A trusted name for your water needs"
+        footerAddress: "Bharatkoop Mandir, Chitrakoot, Uttar Pradesh",
+        footerDescription: "A trusted name for your water needs"
+
     }
+
 };
 
-// =================================
-// HERO SLIDER
-// =================================
+/* =============================
+   HERO TEXT SLIDES
+============================= */
 
 const slides = {
+
     hi: [
         {
-            title: "RAJRANI <span>WATER BORING</span>",
-            desc: "पानी की हर जरूरत का भरोसेमंद समाधान"
+            title: "RAJLAXMI <span>WATER BORING</span>",
+            text: "पानी की हर जरूरत का भरोसेमंद समाधान"
         },
         {
-            title: "MODERN <span>BOREWELL SERVICES</span>",
-            desc: "वाटर बोरिंग और बोरवेल ड्रिलिंग की सुविधा"
+            title: "PROFESSIONAL <span>BOREWELL SERVICES</span>",
+            text: "वाटर बोरिंग और बोरवेल ड्रिलिंग सेवाएं"
         },
         {
             title: "BHARATKOOP <span>CHITRAKOOT</span>",
-            desc: "आज ही संपर्क करें – 📞 1234567890"
+            text: "आज ही संपर्क करें – 📞 8303746358"
         }
     ],
 
     en: [
         {
-            title: "RAJRANI <span>WATER BORING</span>",
-            desc: "A Trusted Name for Your Water Needs"
+            title: "RAJLAXMI <span>WATER BORING</span>",
+            text: "A Trusted Name for Your Water Needs"
         },
         {
-            title: "MODERN <span>BOREWELL SERVICES</span>",
-            desc: "Water Boring and Borewell Drilling Services"
+            title: "PROFESSIONAL <span>BOREWELL SERVICES</span>",
+            text: "Water Boring and Borewell Drilling Services"
         },
         {
             title: "BHARATKOOP <span>CHITRAKOOT</span>",
-            desc: "Contact Us Today – 📞 1234567890"
+            text: "Contact Us Today – 📞 8303746358"
         }
     ]
+
 };
 
-let currentLanguage =
-    localStorage.getItem("rajraniLanguage") || "hi";
+/* =============================
+   LANGUAGE
+============================= */
+
+let language =
+    localStorage.getItem("rajlaxmiLanguage") || "hi";
+
+if (!translations[language]) {
+    language = "hi";
+}
+
+const languageBtn = document.getElementById("languageBtn");
+
+const heroSlider = document.getElementById("heroSlider");
+
+const dots = document.querySelectorAll(".slider-dot");
 
 let currentSlide = 0;
-
-const slideContent = document.getElementById("slideContent");
-const dots = document.querySelectorAll(".dot");
+let slideInterval;
 
 function showSlide(index) {
-    currentSlide = index;
 
-    const slide = slides[currentLanguage][currentSlide];
+    const total = slides[language].length;
 
-    slideContent.classList.remove("slide-text");
+    currentSlide = (index + total) % total;
 
-    void slideContent.offsetWidth;
+    const slide = slides[language][currentSlide];
 
-    slideContent.innerHTML = `
+    heroSlider.style.animation = "none";
+
+    void heroSlider.offsetWidth;
+
+    heroSlider.innerHTML = `
         <h1>${slide.title}</h1>
-        <p>${slide.desc}</p>
+        <p>${slide.text}</p>
     `;
 
-    slideContent.classList.add("slide-text");
+    heroSlider.style.animation = "slideUp .75s ease";
 
     dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === currentSlide);
     });
+
 }
-
-dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-        showSlide(Number(dot.dataset.slide));
-    });
-});
-
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % 3;
-    showSlide(currentSlide);
-}, 5000);
-
-// =================================
-// LANGUAGE SWITCH
-// =================================
-
-const langBtn = document.getElementById("langBtn");
 
 function applyLanguage() {
-    document.documentElement.lang = currentLanguage;
+
+    document.documentElement.lang = language;
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
+
         const key = element.dataset.i18n;
 
-        if (translations[currentLanguage][key]) {
-            element.innerHTML = translations[currentLanguage][key];
+        if (translations[language][key]) {
+            element.innerHTML = translations[language][key];
         }
+
     });
 
-    langBtn.textContent =
-        currentLanguage === "hi" ? "🌐 EN" : "🌐 हिंदी";
+    languageBtn.textContent =
+        language === "hi" ? "🌐 EN" : "🌐 हिंदी";
 
     showSlide(currentSlide);
+
 }
 
-langBtn.addEventListener("click", () => {
-    currentLanguage =
-        currentLanguage === "hi" ? "en" : "hi";
+languageBtn.addEventListener("click", () => {
 
-    localStorage.setItem("rajraniLanguage", currentLanguage);
+    language = language === "hi" ? "en" : "hi";
+
+    localStorage.setItem("rajlaxmiLanguage", language);
 
     applyLanguage();
+
+});
+
+/* =============================
+   AUTOMATIC TEXT SLIDER
+============================= */
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function previousSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function startSlideTimer() {
+
+    clearInterval(slideInterval);
+
+    slideInterval = setInterval(nextSlide, 5000);
+
+}
+
+document.getElementById("nextSlide")
+    .addEventListener("click", () => {
+
+        nextSlide();
+        startSlideTimer();
+
+    });
+
+document.getElementById("prevSlide")
+    .addEventListener("click", () => {
+
+        previousSlide();
+        startSlideTimer();
+
+    });
+
+dots.forEach(dot => {
+
+    dot.addEventListener("click", () => {
+
+        showSlide(Number(dot.dataset.slide));
+
+        startSlideTimer();
+
+    });
+
 });
 
 applyLanguage();
+startSlideTimer();
 
-// =================================
-// THEME SWITCH
-// =================================
+/* =============================
+   DARK / LIGHT THEME
+============================= */
 
 const themeBtn = document.getElementById("themeBtn");
 
-let currentTheme =
-    localStorage.getItem("rajraniTheme") || "dark";
+let theme =
+    localStorage.getItem("rajlaxmiTheme") || "dark";
 
 function applyTheme() {
+
     document.body.classList.toggle(
         "light",
-        currentTheme === "light"
+        theme === "light"
     );
 
     themeBtn.textContent =
-        currentTheme === "dark" ? "☀️" : "🌙";
+        theme === "dark" ? "☀️" : "🌙";
+
+    themeBtn.setAttribute(
+        "aria-label",
+        theme === "dark"
+            ? "Switch to light theme"
+            : "Switch to dark theme"
+    );
+
 }
 
 themeBtn.addEventListener("click", () => {
-    currentTheme =
-        currentTheme === "dark" ? "light" : "dark";
 
-    localStorage.setItem("rajraniTheme", currentTheme);
+    theme = theme === "dark" ? "light" : "dark";
+
+    localStorage.setItem("rajlaxmiTheme", theme);
 
     applyTheme();
+
 });
 
 applyTheme();
 
-// =================================
-// BACKGROUND ANIMATION SWITCH
-// =================================
+/* =============================
+   REAL VIDEO BACKGROUND
+============================= */
 
-const animationScenes =
-    document.querySelectorAll(".animation-scene");
+const videos = [
+    document.getElementById("drillingVideo"),
+    document.getElementById("waterVideo")
+];
 
-let currentAnimation = 0;
+let activeVideo = 0;
+let isSwitching = false;
 
-setInterval(() => {
-    animationScenes[currentAnimation]
-        .classList.remove("active");
+const FADE_TIME = 1500;
 
-    currentAnimation =
-        (currentAnimation + 1) % animationScenes.length;
+function playVideo(index) {
 
-    animationScenes[currentAnimation]
-        .classList.add("active");
-}, 8000);
+    const video = videos[index];
 
-// =================================
-// SCROLL ANIMATIONS
-// =================================
+    if (video.error) {
+        return Promise.reject(
+            new Error("Video file could not be loaded")
+        );
+    }
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
+    try {
+        video.currentTime = 0;
+    } catch (error) {
+        console.warn("Cannot reset video:", error);
+    }
+
+    return video.play();
+}
+
+async function switchVideo() {
+
+    if (isSwitching) return;
+
+    isSwitching = true;
+
+    const oldIndex = activeVideo;
+    const nextIndex = 1 - oldIndex;
+
+    const oldVideo = videos[oldIndex];
+    const nextVideo = videos[nextIndex];
+
+    try {
+
+        await playVideo(nextIndex);
+
+        nextVideo.classList.add("active");
+        oldVideo.classList.remove("active");
+
+        activeVideo = nextIndex;
+
+        setTimeout(() => {
+
+            oldVideo.pause();
+            isSwitching = false;
+
+        }, FADE_TIME);
+
+    } catch (error) {
+
+        console.warn(
+            "Next background video unavailable:",
+            error
+        );
+
+        isSwitching = false;
+
+        if (!oldVideo.error) {
+
+            try {
+                oldVideo.currentTime = 0;
+                await oldVideo.play();
+            } catch (playError) {
+                console.warn("Video restart failed:", playError);
+            }
+
         }
+
+    }
+
+}
+
+videos.forEach((video, index) => {
+
+    video.muted = true;
+
+    video.addEventListener("ended", () => {
+
+        if (index === activeVideo) {
+            switchVideo();
+        }
+
     });
-}, {
-    threshold: 0.12
+
+    video.addEventListener("error", () => {
+
+        console.warn(
+            "Background video not found:",
+            video.currentSrc
+        );
+
+        if (index === activeVideo && !isSwitching) {
+            switchVideo();
+        }
+
+    });
+
 });
 
-document.querySelectorAll(".reveal").forEach(element => {
-    observer.observe(element);
+videos[0].play().catch(error => {
+
+    console.warn(
+        "Initial video autoplay unavailable:",
+        error
+    );
+
+    if (!videos[1].error) {
+        switchVideo();
+    }
+
 });
 
-// =================================
-// FOOTER YEAR
-// =================================
+/* =============================
+   MOBILE MENU
+============================= */
+
+const menuBtn = document.getElementById("menuBtn");
+
+const navigation = document.getElementById("navigation");
+
+function closeMenu() {
+
+    navigation.classList.remove("open");
+    menuBtn.textContent = "☰";
+    menuBtn.setAttribute("aria-expanded", "false");
+
+}
+
+menuBtn.addEventListener("click", () => {
+
+    const opened = navigation.classList.toggle("open");
+
+    menuBtn.textContent = opened ? "✕" : "☰";
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        String(opened)
+    );
+
+});
+
+navigation.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", closeMenu);
+
+});
+
+/* =============================
+   SCROLL ANIMATION
+============================= */
+
+if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.12
+    });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+        observer.observe(element);
+    });
+
+} else {
+
+    document.querySelectorAll(".reveal").forEach(element => {
+        element.classList.add("visible");
+    });
+
+}
+
+/* =============================
+   CURRENT YEAR
+============================= */
 
 document.getElementById("year").textContent =
     new Date().getFullYear();

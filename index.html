@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071525">
 
-    <title>Rajrani Water Boring | Chitrakoot</title>
+    <title>Rajlaxmi Water Boring | Chitrakoot UP</title>
 
     <meta name="description"
-          content="Rajrani Water Boring - Water boring and borewell services in Bharatkoop, Chitrakoot, Uttar Pradesh.">
+          content="Rajlaxmi Water Boring, Bharatkoop Mandir, Chitrakoot, Uttar Pradesh. Water boring and borewell drilling enquiries. Call 8303746358.">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header class="navbar">
 
-<header>
+    <a href="#home" class="logo">
+        <span class="logo-symbol">💧</span>
+        <span>RAJLAXMI <strong>WATER BORING</strong></span>
+    </a>
 
-    <div class="logo">
-        💧 RAJRANI BORING
-    </div>
-
-    <nav>
+    <nav id="navigation">
         <a href="#home" data-i18n="navHome">होम</a>
         <a href="#services" data-i18n="navServices">सेवाएं</a>
         <a href="#about" data-i18n="navAbout">हमारे बारे में</a>
@@ -31,167 +31,245 @@
         <a href="#contact" data-i18n="navContact">संपर्क</a>
     </nav>
 
-    <div class="controls">
-        <button id="langBtn" aria-label="Change language">🌐 EN</button>
-        <button id="themeBtn" aria-label="Change theme">☀️</button>
+    <div class="nav-actions">
+
+        <button id="languageBtn"
+                class="icon-button"
+                type="button"
+                aria-label="Change language">
+            🌐 EN
+        </button>
+
+        <button id="themeBtn"
+                class="icon-button"
+                type="button"
+                aria-label="Change theme">
+            ☀️
+        </button>
+
+        <button id="menuBtn"
+                class="icon-button menu-button"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="navigation">
+            ☰
+        </button>
+
     </div>
 
 </header>
 
-<!-- HERO -->
+<main>
+
+<!-- HERO WITH REAL VIDEOS -->
 
 <section class="hero" id="home">
 
-    <div class="animated-background">
+    <div class="hero-media">
 
-        <!-- DRILLING ANIMATION -->
+        <video
+            id="drillingVideo"
+            class="background-video active"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+            poster="images/machine1.jpg">
 
-        <div class="animation-scene drilling-scene active">
+            <source src="videos/drilling.mp4" type="video/mp4">
 
-            <div class="sun"></div>
+        </video>
 
-            <div class="cloud cloud1"></div>
-            <div class="cloud cloud2"></div>
+        <video
+            id="waterVideo"
+            class="background-video"
+            muted
+            playsinline
+            preload="metadata"
+            poster="images/machine3.jpg">
 
-            <div class="machine">
+            <source src="videos/water.mp4" type="video/mp4">
 
-                <div class="machine-cabin">
-                    <div class="cabin-window"></div>
-                </div>
-
-                <div class="machine-body"></div>
-
-                <div class="machine-wheel wheel1"></div>
-                <div class="machine-wheel wheel2"></div>
-
-                <div class="drill-tower"></div>
-                <div class="drill-rod"></div>
-                <div class="drill-bit"></div>
-
-            </div>
-
-            <div class="ground"></div>
-
-            <div class="soil-particle particle1"></div>
-            <div class="soil-particle particle2"></div>
-            <div class="soil-particle particle3"></div>
-            <div class="soil-particle particle4"></div>
-
-        </div>
-
-        <!-- WATER ANIMATION -->
-
-        <div class="animation-scene water-scene">
-
-            <div class="water-ground"></div>
-
-            <div class="water-pipe"></div>
-            <div class="water-stream"></div>
-
-            <div class="water-splash splash1"></div>
-            <div class="water-splash splash2"></div>
-            <div class="water-splash splash3"></div>
-
-            <div class="water-pool"></div>
-
-            <div class="water-wave wave1"></div>
-            <div class="water-wave wave2"></div>
-            <div class="water-wave wave3"></div>
-
-        </div>
+        </video>
 
     </div>
 
-    <div class="overlay"></div>
+    <div class="hero-overlay"></div>
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-        <div class="badge" data-i18n="badge">
-            🚜 आपकी बोरिंग सेवा के लिए संपर्क करें
+        <div class="hero-badge" data-i18n="heroBadge">
+            🚜 वाटर बोरिंग एवं बोरवेल सेवाएं
         </div>
 
-        <div id="slideContent" class="slide-text">
-            <h1>RAJRANI <span>WATER BORING</span></h1>
-            <p>पानी की हर जरूरत का भरोसेमंद समाधान</p>
+        <div id="heroSlider" class="hero-slider" aria-live="off">
+
+            <h1>
+                RAJLAXMI <span>WATER BORING</span>
+            </h1>
+
+            <p>
+                पानी की हर जरूरत का भरोसेमंद समाधान
+            </p>
+
         </div>
 
-        <div class="buttons">
+        <div class="hero-buttons">
 
-            <a href="tel:1234567890"
-               class="btn btn-primary"
-               data-i18n="call">
+            <a class="btn btn-primary"
+               href="tel:8303746358"
+               data-i18n="callNow">
                 📞 अभी कॉल करें
             </a>
 
-            <a href="https://wa.me/911234567890"
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/918303746358"
                target="_blank"
                rel="noopener noreferrer"
-               class="btn btn-whatsapp"
                data-i18n="whatsapp">
                 💬 WhatsApp करें
             </a>
 
-            <a href="#services"
-               class="btn btn-outline"
-               data-i18n="explore">
+            <a class="btn btn-outline"
+               href="#services"
+               data-i18n="ourServices">
                 हमारी सेवाएं
             </a>
 
         </div>
 
-        <div class="slider-dots">
+        <div class="slider-controls">
 
-            <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
-            <button class="dot" data-slide="1" aria-label="Slide 2"></button>
-            <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+            <button id="prevSlide"
+                    class="slider-arrow"
+                    type="button"
+                    aria-label="Previous slide">
+                ❮
+            </button>
+
+            <div class="slider-dots">
+
+                <button class="slider-dot active"
+                        type="button"
+                        data-slide="0"
+                        aria-label="Slide 1"></button>
+
+                <button class="slider-dot"
+                        type="button"
+                        data-slide="1"
+                        aria-label="Slide 2"></button>
+
+                <button class="slider-dot"
+                        type="button"
+                        data-slide="2"
+                        aria-label="Slide 3"></button>
+
+            </div>
+
+            <button id="nextSlide"
+                    class="slider-arrow"
+                    type="button"
+                    aria-label="Next slide">
+                ❯
+            </button>
 
         </div>
 
     </div>
+
+    <a href="#services"
+       class="scroll-down"
+       aria-label="Scroll to services">
+        ↓
+    </a>
 
 </section>
 
 <!-- SERVICES -->
 
-<section id="services">
+<section class="section services-section" id="services">
 
-    <div class="section-title reveal">
+    <div class="section-heading reveal">
+
+        <span class="section-label" data-i18n="servicesLabel">
+            OUR SERVICES
+        </span>
+
         <h2 data-i18n="servicesTitle">
             हमारी <span>सेवाएं</span>
         </h2>
-        <p data-i18n="servicesSubtitle">
-            पानी की बोरिंग से जुड़ी सेवाओं की जानकारी
+
+        <p data-i18n="servicesDescription">
+            वाटर बोरिंग और बोरवेल से जुड़ी जानकारी
         </p>
+
     </div>
 
-    <div class="cards">
+    <div class="service-grid">
 
-        <div class="card reveal">
-            <div class="card-icon">🚜</div>
-            <h3 data-i18n="service1Title">वाटर बोरिंग</h3>
-            <p data-i18n="service1Desc">
-                पानी की जरूरत के लिए बोरिंग कार्य की जानकारी
-                और सुविधा के लिए संपर्क करें।
-            </p>
-        </div>
+        <article class="service-card reveal">
 
-        <div class="card reveal">
-            <div class="card-icon">💧</div>
-            <h3 data-i18n="service2Title">बोरवेल ड्रिलिंग</h3>
-            <p data-i18n="service2Desc">
-                बोरवेल ड्रिलिंग से जुड़ी जानकारी और
-                उपलब्ध सेवाओं के लिए हमसे बात करें।
-            </p>
-        </div>
+            <div class="service-icon">🚜</div>
 
-        <div class="card reveal">
-            <div class="card-icon">📞</div>
-            <h3 data-i18n="service3Title">बोरिंग की जानकारी</h3>
-            <p data-i18n="service3Desc">
-                बोरिंग कार्य, स्थान और अन्य जरूरी
-                जानकारी के लिए सीधे संपर्क करें।
+            <h3 data-i18n="service1Title">
+                वाटर बोरिंग
+            </h3>
+
+            <p data-i18n="service1Description">
+                वाटर बोरिंग कार्य की जानकारी और
+                उपलब्धता के लिए संपर्क करें।
             </p>
-        </div>
+
+            <a href="#contact"
+               class="text-link"
+               data-i18n="learnMore">
+                अधिक जानें →
+            </a>
+
+        </article>
+
+        <article class="service-card reveal">
+
+            <div class="service-icon">⚙️</div>
+
+            <h3 data-i18n="service2Title">
+                बोरवेल ड्रिलिंग
+            </h3>
+
+            <p data-i18n="service2Description">
+                बोरवेल ड्रिलिंग से जुड़ी सेवाओं
+                के बारे में जानकारी प्राप्त करें।
+            </p>
+
+            <a href="#contact"
+               class="text-link"
+               data-i18n="learnMore">
+                अधिक जानें →
+            </a>
+
+        </article>
+
+        <article class="service-card reveal">
+
+            <div class="service-icon">💧</div>
+
+            <h3 data-i18n="service3Title">
+                बोरिंग की जानकारी
+            </h3>
+
+            <p data-i18n="service3Description">
+                बोरिंग कार्य, स्थान और अन्य जानकारी
+                के लिए सीधे कॉल करें।
+            </p>
+
+            <a href="#contact"
+               class="text-link"
+               data-i18n="learnMore">
+                अधिक जानें →
+            </a>
+
+        </article>
 
     </div>
 
@@ -199,73 +277,122 @@
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section class="section about-section" id="about">
 
-    <div class="about-container reveal">
+    <div class="about-grid">
 
-        <div class="section-title">
-            <h2 data-i18n="aboutTitle">
-                Rajrani <span>Water Boring</span>
-            </h2>
+        <div class="about-photo reveal">
+
+            <img
+                src="images/machine1.jpg"
+                alt="Rajlaxmi Water Boring machinery"
+                loading="lazy">
+
+            <div class="photo-caption">
+                💧 RAJLAXMI WATER BORING
+            </div>
+
         </div>
 
-        <p data-i18n="aboutDesc">
-            राजरानी वाटर बोरिंग, भरतकूप मंदिर,
-            चित्रकूट, उत्तर प्रदेश में स्थित है।
-            वाटर बोरिंग और बोरवेल से जुड़ी सेवाओं की
-            जानकारी के लिए हमसे संपर्क करें।
-        </p>
+        <div class="about-content reveal">
 
-        <br>
+            <span class="section-label" data-i18n="aboutLabel">
+                ABOUT OUR BUSINESS
+            </span>
 
-        <a href="tel:1234567890"
-           class="btn btn-primary"
-           data-i18n="contactNow">
-            📞 आज ही संपर्क करें
-        </a>
+            <h2 data-i18n="aboutTitle">
+                Rajlaxmi <span>Water Boring</span>
+            </h2>
+
+            <p data-i18n="aboutDescription">
+                राजलक्ष्मी वाटर बोरिंग, भरतकूप मंदिर,
+                चित्रकूट, उत्तर प्रदेश में स्थित है।
+                वाटर बोरिंग और बोरवेल ड्रिलिंग से जुड़ी
+                जानकारी के लिए हमसे संपर्क करें।
+            </p>
+
+            <div class="about-points">
+
+                <div>✅ <span data-i18n="aboutPoint1">वाटर बोरिंग सेवाएं</span></div>
+
+                <div>✅ <span data-i18n="aboutPoint2">बोरवेल ड्रिलिंग</span></div>
+
+                <div>✅ <span data-i18n="aboutPoint3">फोन और WhatsApp संपर्क</span></div>
+
+            </div>
+
+            <a href="tel:8303746358"
+               class="btn btn-primary"
+               data-i18n="contactNow">
+                📞 आज ही संपर्क करें
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- GALLERY -->
+<!-- PHOTO GALLERY -->
 
-<section id="gallery">
+<section class="section gallery-section" id="gallery">
 
-    <div class="section-title reveal">
+    <div class="section-heading reveal">
+
+        <span class="section-label" data-i18n="galleryLabel">
+            PHOTO GALLERY
+        </span>
 
         <h2 data-i18n="galleryTitle">
             हमारी <span>गैलरी</span>
         </h2>
 
-        <p data-i18n="gallerySubtitle">
-            वाटर बोरिंग और मशीन की झलकियां
+        <p data-i18n="galleryDescription">
+            वाटर बोरिंग और मशीन की तस्वीरें
         </p>
 
     </div>
 
-    <div class="gallery">
+    <div class="gallery-grid">
 
-        <div class="gallery-item reveal">
-            <div class="gallery-art">🚜</div>
-            <div class="gallery-label" data-i18n="gallery1">
+        <figure class="gallery-card reveal">
+
+            <img
+                src="images/machine1.jpg"
+                alt="Water boring machine"
+                loading="lazy">
+
+            <figcaption data-i18n="gallery1">
                 वाटर बोरिंग मशीन
-            </div>
-        </div>
+            </figcaption>
 
-        <div class="gallery-item reveal">
-            <div class="gallery-art">⚙️</div>
-            <div class="gallery-label" data-i18n="gallery2">
+        </figure>
+
+        <figure class="gallery-card reveal">
+
+            <img
+                src="images/machine2.jpg"
+                alt="Borewell drilling"
+                loading="lazy">
+
+            <figcaption data-i18n="gallery2">
                 बोरवेल ड्रिलिंग
-            </div>
-        </div>
+            </figcaption>
 
-        <div class="gallery-item reveal">
-            <div class="gallery-art">💦</div>
-            <div class="gallery-label" data-i18n="gallery3">
+        </figure>
+
+        <figure class="gallery-card reveal">
+
+            <img
+                src="images/machine3.jpg"
+                alt="Water boring work"
+                loading="lazy">
+
+            <figcaption data-i18n="gallery3">
                 बोरिंग कार्य
-            </div>
-        </div>
+            </figcaption>
+
+        </figure>
 
     </div>
 
@@ -273,74 +400,84 @@
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section class="section contact-section" id="contact">
 
-    <div class="section-title reveal">
+    <div class="section-heading reveal">
+
+        <span class="section-label" data-i18n="contactLabel">
+            GET IN TOUCH
+        </span>
 
         <h2 data-i18n="contactTitle">
             हमसे <span>संपर्क करें</span>
         </h2>
 
-        <p data-i18n="contactSubtitle">
-            बोरिंग की जानकारी के लिए कॉल या WhatsApp करें।
+        <p data-i18n="contactDescription">
+            वाटर बोरिंग की जानकारी के लिए कॉल या WhatsApp करें।
         </p>
 
     </div>
 
-    <div class="contact-container">
+    <div class="contact-grid">
 
-        <div class="contact-box reveal">
+        <div class="contact-card reveal">
 
-            <h3>💧 Rajrani Water Boring</h3>
+            <h3>💧 Rajlaxmi Water Boring</h3>
 
-            <div class="contact-row">
+            <div class="contact-item">
 
-                <strong data-i18n="phoneLabel">
-                    📞 मोबाइल नंबर
-                </strong>
+                <span class="contact-icon">📞</span>
 
-                <br>
+                <div>
+                    <strong data-i18n="phoneLabel">मोबाइल नंबर</strong>
 
-                <a href="tel:1234567890">
-                    1234567890
-                </a>
-
-            </div>
-
-            <div class="contact-row">
-
-                <strong data-i18n="addressLabel">
-                    📍 हमारा पता
-                </strong>
-
-                <br>
-
-                Bharatkoop Mandir,<br>
-                Chitrakoot, Uttar Pradesh
+                    <p>
+                        <a href="tel:8303746358">
+                            83037 46358
+                        </a>
+                    </p>
+                </div>
 
             </div>
 
-            <div class="contact-row">
+            <div class="contact-item">
 
-                <strong data-i18n="businessLabel">
-                    🚜 व्यवसाय
-                </strong>
+                <span class="contact-icon">📍</span>
 
-                <br>
+                <div>
+                    <strong data-i18n="addressLabel">हमारा पता</strong>
 
-                Water Boring & Borewell Services
+                    <p>
+                        Bharatkoop Mandir,<br>
+                        Chitrakoot, Uttar Pradesh
+                    </p>
+                </div>
 
             </div>
 
-            <div class="buttons">
+            <div class="contact-item">
 
-                <a href="tel:1234567890"
+                <span class="contact-icon">🚜</span>
+
+                <div>
+                    <strong data-i18n="businessLabel">व्यवसाय</strong>
+
+                    <p>
+                        Water Boring & Borewell Services
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="contact-buttons">
+
+                <a href="tel:8303746358"
                    class="btn btn-primary"
-                   data-i18n="call">
+                   data-i18n="callNow">
                     📞 अभी कॉल करें
                 </a>
 
-                <a href="https://wa.me/911234567890"
+                <a href="https://wa.me/918303746358"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="btn btn-whatsapp"
@@ -352,13 +489,13 @@
 
         </div>
 
-        <div class="reveal">
+        <div class="map-card reveal">
 
             <iframe
-                class="map"
-                title="Bharatkoop Chitrakoot Location"
+                title="Bharatkoop Mandir Chitrakoot Map"
                 src="https://maps.google.com/maps?q=Bharatkoop%20Mandir%20Chitrakoot%20Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                loading="lazy">
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
         </div>
@@ -367,46 +504,19 @@
 
 </section>
 
+</main>
+
 <!-- FOOTER -->
 
 <footer>
 
-    <p>
-        © <span id="year"></span>
-        <strong>Rajrani Water Boring</strong>
-    </p>
+    <div class="footer-logo">
+        💧 RAJLAXMI WATER BORING
+    </div>
 
     <p data-i18n="footerAddress">
-        📍 भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश
+        भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश
     </p>
 
-    <p data-i18n="footerText">
-        💧 पानी की हर जरूरत का भरोसेमंद समाधान
-    </p>
-
-</footer>
-
-<!-- FLOATING BUTTONS -->
-
-<div class="floating-buttons">
-
-    <a href="tel:1234567890"
-       class="float-btn float-call"
-       aria-label="Call Now">
-        📞
-    </a>
-
-    <a href="https://wa.me/911234567890"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="float-btn float-whatsapp"
-       aria-label="WhatsApp">
-        💬
-    </a>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+    <p>
+        📞 
