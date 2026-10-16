@@ -1,76 +1,49 @@
-from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
-
 import os
-import socket
-import threading
-import webbrowser
-
-
-BASE_DIR = Path(__file__).resolve().parent
 
 HOST = "0.0.0.0"
 PORT = 8000
 
-os.chdir(BASE_DIR)
+PROJECT_DIR = Path(__file__).resolve().parent
+
+os.chdir(PROJECT_DIR)
 
 
-def get_local_ip():
+class WebsiteHandler(SimpleHTTPRequestHandler):
 
-    try:
+    extensions_map = {
+        **SimpleHTTPRequestHandler.extensions_map,
+        ".webp": "image/webp",
+        ".mp4": "video/mp4",
+        ".js": "application/javascript",
+        ".css": "text/css",
+        ".xml": "application/xml",
+    }
 
-        with socket.socket(
-            socket.AF_INET,
-            socket.SOCK_DGRAM
-        ) as sock:
-
-            sock.connect(("8.8.8.8", 80))
-
-            return sock.getsockname()[0]
-
-    except OSError:
-
-        return "127.0.0.1"
-
-
-def open_browser():
-
-    webbrowser.open(f"http://127.0.0.1:{PORT}")
+    def end_headers(self):
+        self.send_header("X-Content-Type-Options", "nosniff")
+        super().end_headers()
 
 
 def main():
-
-    local_ip = get_local_ip()
-
     server = ThreadingHTTPServer(
         (HOST, PORT),
-        SimpleHTTPRequestHandler
+        WebsiteHandler
     )
 
     print("=" * 50)
-    print("          RAJLAXMI WATER BORING")
+    print("RAJLAXMI WATER BORING WEBSITE")
     print("=" * 50)
-
-    print("\nWebsite server started!")
-
-    print("\nLaptop URL:")
-    print(f"http://127.0.0.1:{PORT}")
-
-    print("\nMobile URL (same Wi-Fi):")
-    print(f"http://{local_ip}:{PORT}")
-
-    print("\nContact: 8303746358")
-
-    print("\nPress CTRL + C to stop.")
-
-    threading.Timer(1, open_browser).start()
+    print(f"Project Folder: {PROJECT_DIR}")
+    print(f"Local Website: http://127.0.0.1:{PORT}")
+    print("Press CTRL + C to stop the server.")
+    print("=" * 50)
 
     try:
         server.serve_forever()
-
     except KeyboardInterrupt:
         print("\nServer stopped.")
-
     finally:
         server.server_close()
 

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta name="robots" content="noindex,nofollow">
+
+    <title>Owner Admin | Rajlaxmi Water Boring</title>
+
+    <link rel="icon" href="images/logo.webp">
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<header class="admin-header">
+
+    <a href="index.html" class="admin-brand">
+
+        <img src="images/logo.webp" alt="Rajlaxmi Logo">
+
+        <span>RAJLAXMI ADMIN</span>
+
+    </a>
+
+    <a href="index.html" class="back-link">
+        ← Website
+    </a>
+
+</header>
+
+
+<main class="admin-main">
+
+    <section id="loginSection" class="login-section">
+
+        <div class="login-card">
+
+            <img src="images/logo.webp"
+                 alt="Rajlaxmi Water Boring Logo"
+                 class="login-logo">
+
+            <h1>Owner Login</h1>
+
+            <p>Rajlaxmi Water Boring</p>
+
+            <p class="owner-name">Owner: Raju Patel</p>
+
+            <form id="loginForm">
+
+                <label for="adminEmail">Email Address</label>
+
+                <input id="adminEmail"
+                       type="email"
+                       autocomplete="username"
+                       required
+                       placeholder="Enter owner email">
+
+                <label for="adminPassword">Password</label>
+
+                <input id="adminPassword"
+                       type="password"
+                       autocomplete="current-password"
+                       required
+                       placeholder="Enter password">
+
+                <button type="submit" id="loginBtn">
+                    🔐 Secure Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage" class="message"
+               role="status" aria-live="polite"></p>
+
+            <small>
+                Only the authorized owner can upload or delete photos.
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <section id="dashboardSection"
+             class="dashboard"
+             hidden>
+
+        <div class="dashboard-top">
+
+            <div>
+
+                <h1>Owner Dashboard</h1>
+
+                <p>Welcome, Raju Patel 👋</p>
+
+                <small id="loggedInEmail"></small>
+
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+
+        <div class="dashboard-stats">
+
+            <div>
+                <strong id="totalPhotos">0</strong>
+                <span>Uploaded Photos</span>
+            </div>
+
+            <div>
+                <strong>RAJLAXMI</strong>
+                <span>Water Boring</span>
+            </div>
+
+        </div>
+
+
+        <section class="dashboard-card">
+
+            <h2>📸 Upload New Photo</h2>
+
+            <p class="help-text">
+                Photo select karo, naam aur location likho,
+                phir Upload dabao.
+            </p>
+
+            <form id="uploadForm">
+
+                <label for="photoTitle">Photo Title *</label>
+
+                <input id="photoTitle"
+                       type="text"
+                       maxlength="100"
+                       required
+                       placeholder="Example: Borewell Drilling Work">
+
+                <label for="photoLocation">Village / Location</label>
+
+                <input id="photoLocation"
+                       type="text"
+                       maxlength="120"
+                       placeholder="Example: Bharatkoop, Chitrakoot">
+
+                <label for="photoFile">Select Photo *</label>
+
+                <input id="photoFile"
+                       type="file"
+                       accept="image/jpeg,image/png,image/webp"
+                       required>
+
+                <div id="previewBox" class="preview-box" hidden>
+
+                    <img id="photoPreview"
+                         alt="Selected photo preview">
+
+                </div>
+
+                <button type="submit" id="uploadBtn">
+                    ⬆ Upload Photo
+                </button>
+
+            </form>
+
+            <p id="uploadMessage" class="message"
+               role="status" aria-live="polite"></p>
+
+        </section>
+
+
+        <section class="dashboard-card">
+
+            <div class="section-top">
+
+                <h2>🖼️ Manage Gallery</h2>
+
+                <button id="refreshGalleryBtn"
+                        class="small-btn"
+                        type="button">
+                    🔄 Refresh
+                </button>
+
+            </div>
+
+            <div id="adminGallery" class="admin-gallery"></div>
+
+            <p id="galleryMessage" class="message"
+               role="status" aria-live="polite"></p>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<footer class="admin-footer">
+
+    © <span id="adminYear"></span>
+    Rajlaxmi Water Boring
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+<script src="supabase-config.js"></script>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

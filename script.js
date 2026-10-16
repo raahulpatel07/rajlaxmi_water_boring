@@ -1,447 +1,269 @@
 "use strict";
 
-/* =================================
-   RAJLAXMI WATER BORING
-   LANGUAGE TRANSLATIONS
-================================= */
+const PHONE = "8303746358";
+const WHATSAPP = "918303746358";
 
-const translations = {
 
-    hi: {
+// LANGUAGE
 
-        navHome: "होम",
-        navServices: "सेवाएं",
-        navAbout: "हमारे बारे में",
-        navGallery: "गैलरी",
-        navContact: "संपर्क",
+let currentLanguage = "hi";
 
-        heroBadge: "🚜 वाटर बोरिंग एवं बोरवेल सेवाएं",
-
-        callNow: "📞 अभी कॉल करें",
-        whatsapp: "💬 WhatsApp करें",
-        ourServices: "हमारी सेवाएं",
-        contactNow: "📞 आज ही संपर्क करें",
-
-        servicesLabel: "हमारी सेवाएं",
-        servicesTitle: "हमारी <span>सेवाएं</span>",
-        servicesDescription: "वाटर बोरिंग और बोरवेल से जुड़ी जानकारी",
-
-        service1Title: "वाटर बोरिंग",
-        service1Description: "वाटर बोरिंग कार्य की जानकारी और उपलब्धता के लिए संपर्क करें।",
-
-        service2Title: "बोरवेल ड्रिलिंग",
-        service2Description: "बोरवेल ड्रिलिंग से जुड़ी सेवाओं के बारे में जानकारी प्राप्त करें।",
-
-        service3Title: "बोरिंग की जानकारी",
-        service3Description: "बोरिंग कार्य, स्थान और अन्य जानकारी के लिए सीधे कॉल करें।",
-
-        learnMore: "अधिक जानें →",
-
-        aboutLabel: "हमारे व्यवसाय के बारे में",
-        aboutTitle: "Rajlaxmi <span>Water Boring</span>",
-
-        aboutDescription:
-            "राजलक्ष्मी वाटर बोरिंग, भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश में स्थित है। वाटर बोरिंग और बोरवेल ड्रिलिंग से जुड़ी जानकारी के लिए हमसे संपर्क करें।",
-
-        aboutPoint1: "वाटर बोरिंग सेवाएं",
-        aboutPoint2: "बोरवेल ड्रिलिंग",
-        aboutPoint3: "फोन और WhatsApp संपर्क",
-
-        galleryLabel: "फोटो गैलरी",
-        galleryTitle: "हमारी <span>गैलरी</span>",
-        galleryDescription: "वाटर बोरिंग और मशीन की तस्वीरें",
-
-        gallery1: "वाटर बोरिंग मशीन",
-        gallery2: "बोरवेल ड्रिलिंग",
-        gallery3: "बोरिंग कार्य",
-
-        contactLabel: "संपर्क करें",
-        contactTitle: "हमसे <span>संपर्क करें</span>",
-        contactDescription: "वाटर बोरिंग की जानकारी के लिए कॉल या WhatsApp करें।",
-
-        phoneLabel: "मोबाइल नंबर",
-        addressLabel: "हमारा पता",
-        businessLabel: "व्यवसाय",
-
-        footerAddress: "भरतकूप मंदिर, चित्रकूट, उत्तर प्रदेश",
-        footerDescription: "पानी की हर जरूरत का भरोसेमंद समाधान"
-
-    },
-
-    en: {
-
-        navHome: "Home",
-        navServices: "Services",
-        navAbout: "About Us",
-        navGallery: "Gallery",
-        navContact: "Contact",
-
-        heroBadge: "🚜 Water Boring & Borewell Services",
-
-        callNow: "📞 Call Now",
-        whatsapp: "💬 WhatsApp Us",
-        ourServices: "Our Services",
-        contactNow: "📞 Contact Now",
-
-        servicesLabel: "OUR SERVICES",
-        servicesTitle: "Our <span>Services</span>",
-        servicesDescription: "Information about water boring and borewell services",
-
-        service1Title: "Water Boring",
-        service1Description: "Contact us for water boring information and service availability.",
-
-        service2Title: "Borewell Drilling",
-        service2Description: "Get information about borewell drilling and related services.",
-
-        service3Title: "Boring Enquiries",
-        service3Description: "Call us for boring work, locations and other information.",
-
-        learnMore: "Learn More →",
-
-        aboutLabel: "ABOUT OUR BUSINESS",
-        aboutTitle: "Rajlaxmi <span>Water Boring</span>",
-
-        aboutDescription:
-            "Rajlaxmi Water Boring is located near Bharatkoop Mandir, Chitrakoot, Uttar Pradesh. Contact us for information about water boring and borewell drilling services.",
-
-        aboutPoint1: "Water Boring Services",
-        aboutPoint2: "Borewell Drilling",
-        aboutPoint3: "Phone and WhatsApp Contact",
-
-        galleryLabel: "PHOTO GALLERY",
-        galleryTitle: "Our <span>Gallery</span>",
-        galleryDescription: "Water boring and machinery photos",
-
-        gallery1: "Water Boring Machine",
-        gallery2: "Borewell Drilling",
-        gallery3: "Boring Work",
-
-        contactLabel: "GET IN TOUCH",
-        contactTitle: "Contact <span>Us</span>",
-        contactDescription: "Call or WhatsApp us for water boring enquiries.",
-
-        phoneLabel: "Phone Number",
-        addressLabel: "Our Address",
-        businessLabel: "Business",
-
-        footerAddress: "Bharatkoop Mandir, Chitrakoot, Uttar Pradesh",
-        footerDescription: "A trusted name for your water needs"
-
-    }
-
-};
-
-/* =================================
-   HERO SLIDES
-================================= */
-
-const slides = {
-
-    hi: [
-        {
-            title: "RAJLAXMI <span>WATER BORING</span>",
-            text: "पानी की हर जरूरत का भरोसेमंद समाधान"
-        },
-        {
-            title: "PROFESSIONAL <span>BOREWELL SERVICES</span>",
-            text: "वाटर बोरिंग और बोरवेल ड्रिलिंग सेवाएं"
-        },
-        {
-            title: "BHARATKOOP <span>CHITRAKOOT</span>",
-            text: "आज ही संपर्क करें – 📞 8303746358"
-        }
-    ],
-
-    en: [
-        {
-            title: "RAJLAXMI <span>WATER BORING</span>",
-            text: "A Trusted Name for Your Water Needs"
-        },
-        {
-            title: "PROFESSIONAL <span>BOREWELL SERVICES</span>",
-            text: "Water Boring and Borewell Drilling Services"
-        },
-        {
-            title: "BHARATKOOP <span>CHITRAKOOT</span>",
-            text: "Contact Us Today – 📞 8303746358"
-        }
-    ]
-
-};
-
-/* =================================
-   LANGUAGE SETTINGS
-================================= */
-
-let language =
-    localStorage.getItem("rajlaxmiLanguage") || "hi";
-
-if (!translations[language]) {
-    language = "hi";
+try {
+    currentLanguage =
+        localStorage.getItem("rajlaxmi-language") === "en"
+            ? "en"
+            : "hi";
+} catch (error) {
+    currentLanguage = "hi";
 }
 
 const languageBtn = document.getElementById("languageBtn");
-const heroSlider = document.getElementById("heroSlider");
-const dots = document.querySelectorAll(".slider-dot");
 
-let currentSlide = 0;
-let slideInterval;
+function applyLanguage(language) {
 
-function showSlide(index) {
-
-    const total = slides[language].length;
-
-    currentSlide = (index + total) % total;
-
-    const slide = slides[language][currentSlide];
-
-    heroSlider.style.animation = "none";
-
-    void heroSlider.offsetWidth;
-
-    heroSlider.innerHTML = `
-        <h1>${slide.title}</h1>
-        <p>${slide.text}</p>
-    `;
-
-    heroSlider.style.animation = "slideUp .7s ease";
-
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentSlide);
-    });
-
-}
-
-function applyLanguage() {
+    currentLanguage = language;
 
     document.documentElement.lang = language;
 
-    document.querySelectorAll("[data-i18n]").forEach(element => {
+    document.querySelectorAll("[data-hi][data-en]").forEach(element => {
 
-        const key = element.dataset.i18n;
-
-        if (translations[language][key]) {
-            element.innerHTML = translations[language][key];
-        }
+        element.textContent =
+            language === "hi"
+                ? element.dataset.hi
+                : element.dataset.en;
 
     });
 
-    languageBtn.textContent =
-        language === "hi" ? "🌐 EN" : "🌐 हिंदी";
+    languageBtn.textContent = language === "hi" ? "EN" : "हिं";
 
-    showSlide(currentSlide);
-
+    try {
+        localStorage.setItem("rajlaxmi-language", language);
+    } catch (error) {
+        // Continue without storage.
+    }
 }
 
 languageBtn.addEventListener("click", () => {
 
-    language = language === "hi" ? "en" : "hi";
-
-    localStorage.setItem("rajlaxmiLanguage", language);
-
-    applyLanguage();
+    applyLanguage(currentLanguage === "hi" ? "en" : "hi");
 
 });
 
-/* =================================
-   TEXT SLIDER
-================================= */
+applyLanguage(currentLanguage);
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
+
+// THEME
+
+const themeBtn = document.getElementById("themeBtn");
+
+let currentTheme = "dark";
+
+try {
+    currentTheme =
+        localStorage.getItem("rajlaxmi-theme") === "light"
+            ? "light"
+            : "dark";
+} catch (error) {
+    currentTheme = "dark";
 }
 
-function previousSlide() {
+function applyTheme(theme) {
+
+    currentTheme = theme;
+
+    document.body.dataset.theme = theme;
+
+    themeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+
+    try {
+        localStorage.setItem("rajlaxmi-theme", theme);
+    } catch (error) {
+        // Continue without storage.
+    }
+}
+
+themeBtn.addEventListener("click", () => {
+
+    applyTheme(currentTheme === "dark" ? "light" : "dark");
+
+});
+
+applyTheme(currentTheme);
+
+
+// MOBILE MENU
+
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+function closeMenu() {
+
+    navMenu.classList.remove("open");
+
+    menuBtn.textContent = "☰";
+
+    menuBtn.setAttribute("aria-expanded", "false");
+}
+
+menuBtn.addEventListener("click", () => {
+
+    const open = navMenu.classList.toggle("open");
+
+    menuBtn.textContent = open ? "✕" : "☰";
+
+    menuBtn.setAttribute("aria-expanded", String(open));
+
+});
+
+navMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", closeMenu);
+
+});
+
+
+// HERO SLIDER
+
+const slides = [...document.querySelectorAll(".hero-slide")];
+const dots = [...document.querySelectorAll(".dot")];
+
+let currentSlide = 0;
+let slideTimer;
+
+function showSlide(index) {
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === currentSlide);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentSlide);
+    });
+}
+
+function startSlider() {
+
+    clearInterval(slideTimer);
+
+    slideTimer = setInterval(() => {
+
+        if (!document.hidden) {
+            showSlide(currentSlide + 1);
+        }
+
+    }, 5500);
+}
+
+document.getElementById("prevSlide").addEventListener("click", () => {
+
     showSlide(currentSlide - 1);
-}
+    startSlider();
 
-function startSlideTimer() {
+});
 
-    clearInterval(slideInterval);
+document.getElementById("nextSlide").addEventListener("click", () => {
 
-    slideInterval = setInterval(nextSlide, 5000);
+    showSlide(currentSlide + 1);
+    startSlider();
 
-}
-
-document.getElementById("nextSlide")
-    .addEventListener("click", () => {
-
-        nextSlide();
-        startSlideTimer();
-
-    });
-
-document.getElementById("prevSlide")
-    .addEventListener("click", () => {
-
-        previousSlide();
-        startSlideTimer();
-
-    });
+});
 
 dots.forEach(dot => {
 
     dot.addEventListener("click", () => {
 
         showSlide(Number(dot.dataset.slide));
-        startSlideTimer();
+        startSlider();
 
     });
 
 });
 
-applyLanguage();
-startSlideTimer();
+startSlider();
 
-/* =================================
-   THEME SWITCH
-================================= */
 
-const themeBtn = document.getElementById("themeBtn");
-
-let theme =
-    localStorage.getItem("rajlaxmiTheme") || "dark";
-
-function applyTheme() {
-
-    document.body.classList.toggle(
-        "light",
-        theme === "light"
-    );
-
-    themeBtn.textContent =
-        theme === "dark" ? "☀️" : "🌙";
-
-    themeBtn.setAttribute(
-        "aria-label",
-        theme === "dark"
-            ? "Switch to light theme"
-            : "Switch to dark theme"
-    );
-
-}
-
-themeBtn.addEventListener("click", () => {
-
-    theme = theme === "dark" ? "light" : "dark";
-
-    localStorage.setItem("rajlaxmiTheme", theme);
-
-    applyTheme();
-
-});
-
-applyTheme();
-
-/* =================================
-   OPTIMIZED VIDEO PLAYER
-================================= */
+// BACKGROUND VIDEOS
 
 const videos = [
-    document.getElementById("drillingVideo"),
-    document.getElementById("waterVideo")
+    document.getElementById("video1"),
+    document.getElementById("video2")
 ];
 
 let activeVideo = 0;
-let switching = false;
+let switchingVideo = false;
 
-const FADE_DURATION = 1200;
+const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
 
-videos.forEach(video => {
-    video.muted = true;
-    video.playsInline = true;
-});
-
-async function startVideo(index) {
-
-    const video = videos[index];
-
-    if (video.error) {
-        throw new Error("Video is unavailable");
-    }
+async function playVideo(video) {
 
     try {
-        video.currentTime = 0;
+        await video.play();
+        return true;
     } catch (error) {
-        console.warn("Video seek unavailable:", error);
+        return false;
     }
-
-    await video.play();
-
 }
 
 async function switchBackgroundVideo() {
 
-    if (switching) return;
+    if (
+        switchingVideo ||
+        reduceMotion ||
+        document.hidden
+    ) {
+        return;
+    }
 
-    switching = true;
+    switchingVideo = true;
 
-    const oldIndex = activeVideo;
-    const nextIndex = 1 - oldIndex;
+    const current = videos[activeVideo];
 
-    const oldVideo = videos[oldIndex];
-    const nextVideo = videos[nextIndex];
+    const nextIndex = (activeVideo + 1) % videos.length;
 
-    try {
+    const next = videos[nextIndex];
 
-        if (nextVideo.preload === "none") {
-            nextVideo.preload = "auto";
-            nextVideo.load();
-        }
+    next.currentTime = 0;
 
-        await startVideo(nextIndex);
+    if (next.readyState < 2) {
+        next.load();
+    }
 
-        nextVideo.classList.add("active");
-        oldVideo.classList.remove("active");
+    const success = await playVideo(next);
+
+    if (!success) {
+
+        switchingVideo = false;
+
+        current.currentTime = 0;
+
+        await playVideo(current);
+
+        return;
+    }
+
+    next.classList.add("active");
+
+    setTimeout(() => {
+
+        current.classList.remove("active");
+        current.pause();
 
         activeVideo = nextIndex;
 
-        setTimeout(() => {
+        switchingVideo = false;
 
-            oldVideo.pause();
-            switching = false;
-
-        }, FADE_DURATION);
-
-    } catch (error) {
-
-        console.warn("Video switching failed:", error);
-
-        switching = false;
-
-        if (!oldVideo.error) {
-
-            try {
-                oldVideo.currentTime = 0;
-                await oldVideo.play();
-            } catch (playError) {
-                console.warn("Video restart failed:", playError);
-            }
-
-        }
-
-    }
-
+    }, 1350);
 }
 
 videos.forEach((video, index) => {
 
     video.addEventListener("ended", () => {
 
-        if (index === activeVideo) {
-            switchBackgroundVideo();
-        }
-
-    });
-
-    video.addEventListener("error", () => {
-
-        console.warn(
-            "Video loading error:",
-            video.currentSrc
-        );
-
-        if (index === activeVideo && !switching) {
+        if (activeVideo === index) {
             switchBackgroundVideo();
         }
 
@@ -449,51 +271,32 @@ videos.forEach((video, index) => {
 
 });
 
-videos[0].play().catch(error => {
-
-    console.warn("Autoplay unavailable:", error);
-
-});
-
-/* =================================
-   MOBILE MENU
-================================= */
-
-const menuBtn = document.getElementById("menuBtn");
-const navigation = document.getElementById("navigation");
-
-function closeMenu() {
-
-    navigation.classList.remove("open");
-    menuBtn.textContent = "☰";
-    menuBtn.setAttribute("aria-expanded", "false");
-
+if (!reduceMotion) {
+    playVideo(videos[0]);
+} else {
+    videos.forEach(video => video.pause());
 }
 
-menuBtn.addEventListener("click", () => {
+document.addEventListener("visibilitychange", () => {
 
-    const isOpen = navigation.classList.toggle("open");
+    if (document.hidden) {
 
-    menuBtn.textContent = isOpen ? "✕" : "☰";
+        videos.forEach(video => video.pause());
 
-    menuBtn.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-    );
+    } else if (!reduceMotion && !switchingVideo) {
 
-});
+        playVideo(videos[activeVideo]);
 
-navigation.querySelectorAll("a").forEach(link => {
-
-    link.addEventListener("click", closeMenu);
+    }
 
 });
 
-/* =================================
-   SCROLL REVEAL
-================================= */
 
-if ("IntersectionObserver" in window) {
+// SCROLL ANIMATION
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window && !reduceMotion) {
 
     const observer = new IntersectionObserver(entries => {
 
@@ -502,6 +305,7 @@ if ("IntersectionObserver" in window) {
             if (entry.isIntersecting) {
 
                 entry.target.classList.add("visible");
+
                 observer.unobserve(entry.target);
 
             }
@@ -509,24 +313,269 @@ if ("IntersectionObserver" in window) {
         });
 
     }, {
-        threshold: 0.12
+        threshold: 0.08
     });
 
-    document.querySelectorAll(".reveal").forEach(element => {
-        observer.observe(element);
-    });
+    revealElements.forEach(element => observer.observe(element));
 
 } else {
 
-    document.querySelectorAll(".reveal").forEach(element => {
+    revealElements.forEach(element => {
         element.classList.add("visible");
     });
 
 }
 
-/* =================================
-   FOOTER YEAR
-================================= */
+
+// WHATSAPP
+
+function openWhatsApp(message) {
+
+    const url =
+        `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+    window.location.href = url;
+
+}
+
+
+// PRICING BUTTONS
+
+document.querySelectorAll(".price-btn").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const service = button.dataset.service;
+
+        const message = [
+            "Namaste Raju Patel ji,",
+            "",
+            `Mujhe ${service} ka rate jaanna hai.`,
+            "Kripya availability aur per-feet rate batayein.",
+            "",
+            "Rajlaxmi Water Boring Website"
+        ].join("\n");
+
+        openWhatsApp(message);
+
+    });
+
+});
+
+
+// ENQUIRY FORM
+
+document.getElementById("enquiryForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    if (!form.reportValidity()) {
+        return;
+    }
+
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const village = document.getElementById("customerVillage").value.trim();
+    const type = document.getElementById("boringType").value;
+    const date = document.getElementById("workDate").value;
+    const details = document.getElementById("customerMessage").value.trim();
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+
+        alert("Please enter a valid 10-digit mobile number.");
+
+        return;
+    }
+
+    const message = [
+        "Namaste Raju Patel ji,",
+        "",
+        "Mujhe water boring ki enquiry karni hai.",
+        "",
+        `Name: ${name}`,
+        `Mobile: ${phone}`,
+        `Village: ${village}`,
+        `Boring Type: ${type}`,
+        `Required Date: ${date || "Not decided"}`,
+        `Details: ${details || "None"}`,
+        "",
+        "Kripya rate aur availability batayein."
+    ].join("\n");
+
+    openWhatsApp(message);
+
+});
+
+
+// GALLERY LIGHTBOX
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+
+let previousFocus = null;
+
+function openLightbox(image, caption) {
+
+    previousFocus = document.activeElement;
+
+    lightboxImage.src = image;
+
+    lightboxImage.alt = caption;
+
+    lightboxCaption.textContent = caption;
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute("aria-hidden", "false");
+
+    document.body.classList.add("lightbox-open");
+
+    document.getElementById("closeLightbox").focus();
+}
+
+function closeLightbox() {
+
+    lightbox.classList.remove("open");
+
+    lightbox.setAttribute("aria-hidden", "true");
+
+    lightboxImage.removeAttribute("src");
+
+    document.body.classList.remove("lightbox-open");
+
+    if (previousFocus) {
+        previousFocus.focus();
+    }
+}
+
+document.getElementById("galleryGrid").addEventListener("click", event => {
+
+    const item = event.target.closest(".gallery-item");
+
+    if (!item) {
+        return;
+    }
+
+    openLightbox(item.dataset.image, item.dataset.caption);
+
+});
+
+document.getElementById("closeLightbox").addEventListener(
+    "click",
+    closeLightbox
+);
+
+lightbox.addEventListener("click", event => {
+
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+
+});
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+
+        if (lightbox.classList.contains("open")) {
+            closeLightbox();
+        }
+
+        closeMenu();
+
+    }
+
+    if (event.key === "Tab" && lightbox.classList.contains("open")) {
+
+        event.preventDefault();
+
+        document.getElementById("closeLightbox").focus();
+
+    }
+
+});
+
+
+// DYNAMIC SUPABASE GALLERY
+
+async function loadDynamicGallery() {
+
+    const client = window.getRajlaxmiSupabase();
+
+    if (!client) {
+        return;
+    }
+
+    const status = document.getElementById("galleryStatus");
+
+    const { data, error } = await client
+        .from(window.RAJLAXMI_CONFIG.galleryTable)
+        .select("id, title, location, image_path, created_at")
+        .order("created_at", { ascending: false })
+        .limit(100);
+
+    if (error) {
+
+        console.error("Gallery error:", error.message);
+
+        status.textContent =
+            currentLanguage === "hi"
+                ? "नई तस्वीरें अभी लोड नहीं हो सकीं।"
+                : "New photos could not be loaded.";
+
+        return;
+    }
+
+    const grid = document.getElementById("galleryGrid");
+
+    data.forEach(photo => {
+
+        const { data: imageData } = client.storage
+            .from(window.RAJLAXMI_CONFIG.galleryBucket)
+            .getPublicUrl(photo.image_path);
+
+        const imageUrl = imageData.publicUrl;
+
+        const button = document.createElement("button");
+
+        button.className = "gallery-item";
+
+        button.type = "button";
+
+        button.dataset.image = imageUrl;
+
+        button.dataset.caption =
+            [photo.title, photo.location]
+                .filter(Boolean)
+                .join(" - ");
+
+        const image = document.createElement("img");
+
+        image.src = imageUrl;
+
+        image.alt = photo.title || "Water boring work";
+
+        image.loading = "lazy";
+
+        const caption = document.createElement("span");
+
+        caption.textContent = button.dataset.caption;
+
+        button.append(image, caption);
+
+        grid.appendChild(button);
+
+    });
+
+}
+
+loadDynamicGallery();
+
+
+// FOOTER YEAR
 
 document.getElementById("year").textContent =
     new Date().getFullYear();
