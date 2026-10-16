@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://raahulpatel07.github.io/rajlaxmi_water_boring/sitemap.xml
+Sitemap: https://rajlaxmi-water-boring.pages.dev/sitemap.xml
