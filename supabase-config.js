@@ -17,9 +17,9 @@ Service-role key ya secret key kabhi frontend mein mat daalna.
 
 window.RAJLAXMI_CONFIG = {
 
-    supabaseUrl: "",
+    supabaseUrl: "https://ivjzxfvdvfmutpqqbgip.supabase.co",
 
-    supabaseKey: "",
+    supabaseKey: "sb_publishable_DasIbz-QepDA8esBYvTCBA_qGOnSkWA",
 
     galleryBucket: "gallery",
 
